@@ -68,7 +68,6 @@ struct DetailView: View {
             
             if let decoded = try? JSONDecoder().decode(PokemonSpecies.self, from: data) {
                 
-                // Buscar la descripción en inglés
                 if let entry = decoded.flavor_text_entries.first(where: { $0.language.name == "en" }) {
                     
                     let cleanText = entry.flavor_text

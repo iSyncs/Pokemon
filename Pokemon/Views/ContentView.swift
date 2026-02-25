@@ -54,7 +54,6 @@ struct ContentView: View {
         }
     }
     
-    // MARK: - Fetch Function
     func fetchPokemon() {
         guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=151") else { return }
         
