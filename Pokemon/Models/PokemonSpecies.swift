@@ -1,3 +1,11 @@
+//
+//  PokemonSpecies.swift
+//  Pokemon
+//
+//  Created by Carlos Baranda on 24/02/26.
+//
+
+
 import Foundation
 
 struct PokemonSpecies: Codable {

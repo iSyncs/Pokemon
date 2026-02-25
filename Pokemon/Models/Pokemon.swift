@@ -1,5 +1,5 @@
 //
-//  PokemonResponse.swift
+//  Pokemon.swift
 //  Pokemon
 //
 //  Created by Carlos Baranda on 24/02/26.
@@ -16,4 +16,11 @@ struct Pokemon: Codable, Identifiable {
     let name: String
     let url: String
     var id: String { url }
+    
+    var pokemonID: String {
+        url.split(separator: "/").last { !$0.isEmpty }.map(String.init) ?? ""
+    }
+    var imageURL: String {
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(pokemonID).png"
+    }
 }
